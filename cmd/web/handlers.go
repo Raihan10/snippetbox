@@ -19,7 +19,7 @@ func home(w http.ResponseWriter, r *http.Request) {
 	// file in the slice.
 	files := []string{
 		"./ui/html/base.tmpl",
-		"./ui/html/partials/home.tmpl",
+		"./ui/html/partials/nav.tmpl",
 		"./ui/html/pages/home.tmpl",
 	}
 
@@ -61,8 +61,3 @@ func snippetCreate(w http.ResponseWriter, r *http.Request) {
 	}
 	w.Write([]byte("Create a new snippet..."))
 }
-
-// Use the template.ParseFiles() function to read the template file into a
-// template set. If there's an error, we log the detailed error message and use
-// the http.Error() function to send a generic 500 Internal Server Error
-// response to the user.
